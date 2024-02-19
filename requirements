@@ -1,5 +1,6 @@
-Numpy version: 1.21.5
-Pandas version: 1.4.4
-Scikit-learn version: 1.0.2
-Keras version: 2.11.0
-TensorFlow version: 2.11.0
+numpy==1.21.5
+pandas==1.4.4
+sklearn==1.0.2
+keras==2.11.0
+tensorflow==2.11.0
+python==3.9.13
