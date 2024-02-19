@@ -1,4 +1,4 @@
-# grid search mlps for airline passengers
+# grid search mlps for power consumption
 from math import sqrt
 from numpy import array
 from numpy import mean
@@ -118,9 +118,9 @@ def grid_search(data, cfg_list, n_test):
 def model_configs():
 	# define scope of configs
 	n_input = [12]
-	n_nodes = [50, 100]
-	n_epochs = [100]
-	n_batch = [1, 150]
+	n_nodes = [10, 200]
+	n_epochs = [10]
+	n_batch = [1, 12]
 	n_diff = [0, 12]
 	# create configs
 	configs = list()
@@ -135,8 +135,9 @@ def model_configs():
 	return configs
 
 # define dataset
-series = read_csv('monthly-airline-passengers.csv', header=0, index_col=0)
+series = read_csv('household_power_consumption_months.csv', header=0, index_col=0, usecols=['datetime', 'Global_active_power'])
 data = series.values
+print(data)
 # data split
 n_test = 12
 # model configs
